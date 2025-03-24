@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スゴロク スタート画面</title>
+    <link rel="stylesheet" href="startDispley.css">
+</head>
+<body>
+    <div id="startDisplay">
+        <h1>スゴロク</h1>
+        <div id="Number_of_players_select">
+            <h2>プレイ人数を選択してください</h2>
+            <div>
+                <a href="gameDispley.html"><button id="1playerButton">１人</button></a>
+                <a href="gameDispley.html"><button id="2playerButton">２人</button></a>
+                <a href="gameDispley.html"><button id="3playerButton">３人</button></a>
+                <a href="gameDispley.html"><button id="4playerButton">４人</button></a>
+            </div>
+        </div>
+        <ul>
+            <li><img src="dice01_a_01.png" alt=""></li>
+            <li><img src="dice01_a_02.png" alt=""></li>
+            <li><img src="dice01_a_03.png" alt=""></li>
+            <li><img src="dice01_a_04.png" alt=""></li>
+            <li><img src="dice01_a_05.png" alt=""></li>
+            <li><img src="dice01_a_06.png" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("1playerButton").addEventListener("click", function() {
+            sessionStorage.setItem('players', 1); // 1人を保存
+        });
+        document.getElementById("2playerButton").addEventListener("click", function() {
+            sessionStorage.setItem('players', 2); // 2人を保存
+        });
+        document.getElementById("3playerButton").addEventListener("click", function() {
+            sessionStorage.setItem('players', 3); // 3人を保存
+        });
+        document.getElementById("4playerButton").addEventListener("click", function() {
+            sessionStorage.setItem('players', 4); // 4人を保存
+        });
+    </script>
+</body>
+</html>
